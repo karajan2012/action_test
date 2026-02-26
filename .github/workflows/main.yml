@@ -23,3 +23,8 @@ jobs:
       uses: matlab-actions/setup-matlab@v2
       with:
         release: R2023a
+        products: >
+            Simulink
+            Stateflow
+            Simulink_Test
+            Parallel_Computing_Toolbox
