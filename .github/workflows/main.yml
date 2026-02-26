@@ -2,8 +2,18 @@ name: CItest
 on: [ workflow_dispatch ]
 
 jobs:
-  build:
+  testjob:
+    name: Use Linux commands
     runs-on: ubuntu-latest
 
     steps:
-    - run: echo Hello, world!
+    - name: check echo
+      run: echo Hello, world!
+    - name: check out
+      uses: actions/checkout@v6
+    - name: Show current directory
+      run: |
+        echo "Current path:"
+        pwd
+        echo "Directory list:"
+        ls -la
